@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    confluence:
+        container_name: confluence
+        image: registry.cn-beijing.aliyuncs.com/huyuan/atlassian-confluence:7.11.2
+        user: root
+        restart: unless-stopped
+        ports:
+            - 8090:8090
+        environment:
+            TZ: 'Asia/Shanghai'
+        volumes:
+            - ./volume/confluence/confluence/:/var/atlassian/application-data/confluence
+            - ./volume/confluence/server.xml:/opt/atlassian/confluence/conf/server.xml

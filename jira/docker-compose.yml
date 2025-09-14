@@ -8,8 +8,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - ./volume/mysql/db/:/var/lib/mysql/
-      - ./volume/mysql/conf/my.cnf:/etc/my.cnf
+      - ./volumes/mysql/db/:/var/lib/mysql/
+      - ./volumes/mysql/conf/my.cnf:/etc/my.cnf
 
   jira:
     container_name: jira
@@ -21,4 +21,4 @@ services:
     ports:
       - 8001:8080
     volumes:
-      - ./volume/jira/jira/:/var/atlassian/jira
+      - ./volumes/jira/jira/:/var/atlassian/jira

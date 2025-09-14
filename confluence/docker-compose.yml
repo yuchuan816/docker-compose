@@ -10,5 +10,5 @@ services:
         environment:
             TZ: 'Asia/Shanghai'
         volumes:
-            - ./volume/confluence/confluence/:/var/atlassian/application-data/confluence
-            - ./volume/confluence/server.xml:/opt/atlassian/confluence/conf/server.xml
+            - ./volumes/confluence/confluence/:/var/atlassian/application-data/confluence
+            - ./volumes/confluence/server.xml:/opt/atlassian/confluence/conf/server.xml

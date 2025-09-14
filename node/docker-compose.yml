@@ -1,0 +1,14 @@
+services:
+  app:
+    image: node:22-alpine
+    container_name: my-node-app
+    working_dir: /app
+    volumes:
+      - ./:/app  # 挂载当前目录到容器的 /app
+    ports:
+      - "3000:3000" # 主机端口:容器端口
+    command: sh -c "npm install && npm run dev"
+    # 如果你的 node_modules 已经存在，可以使用以下命令避免重复安装
+    # command: npm run dev
+    stdin_open: true # 类似于 -i
+    tty: true        # 类似于 -t

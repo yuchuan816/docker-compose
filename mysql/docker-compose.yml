@@ -12,8 +12,8 @@ services:
     networks:
       - network
     volumes:
-      - ./volume/db/:/var/lib/mysql/
-      - ./volume/conf/my.cnf:/etc/my.cnf
+      - ./volumes/db/:/var/lib/mysql/
+      - ./volumes/conf/my.cnf:/etc/my.cnf
 
 networks:
   network:
